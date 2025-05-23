@@ -29,7 +29,7 @@ RESTful Web Service for managing personal expenses, built with Node.js, Express,
 ## 👨‍💻 Developers
 
 - Onn Bondarman
-- Shahar Levi
+- Nadav Nini
 
 ## 🌐 Deployment (TBD)
 
