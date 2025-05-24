@@ -19,4 +19,3 @@ const getAbout = async (req, res) => {
 };
 
 module.exports = { getAbout };
-
