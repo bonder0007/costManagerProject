@@ -33,7 +33,15 @@ RESTful Web Service for managing personal expenses, built with Node.js, Express,
 
 ## 🌐 Deployment (TBD)
 
-Will be deployed to [Render](https://render.com).
+## Live Deployment
+
+You can access the deployed application at:
+
+🌐 https://costmanagerproject-production.up.railway.app
+
+Example endpoint:
+🧪 `/api/about` – returns developer names from the database
+
 
 ## 📂 Folder Structure
 
