@@ -15,7 +15,7 @@ class TestCostManagerAPI(unittest.TestCase):
         self.assertTrue(all("first_name" in member and "last_name" in member for member in res.json()))
 
     def test_add_cost_valid_data(self):
-        """Test POST /api/addCost with valid data: should return the created cost item with matching fields."""
+        """Test POST /api/add_cost with valid data: should return the created cost item with matching fields."""
         data = {
             "userid": 242424,
             "description": "testing unittest valid",
@@ -23,7 +23,7 @@ class TestCostManagerAPI(unittest.TestCase):
             "sum": 19,
             "date": str(datetime.now())
         }
-        res = requests.post(f"{BASE_URL}/api/addCost", json=data)
+        res = requests.post(f"{BASE_URL}/api/add_cost", json=data)
         self.assertEqual(res.status_code, 201)
         response = res.json()
         for key in ["userid", "description", "category", "sum"]:
@@ -32,13 +32,13 @@ class TestCostManagerAPI(unittest.TestCase):
         self.assertIn("date",response)
 
     def test_add_cost_invalid_missing_sum(self):
-        """Test POST /api/addCost with missing 'sum': should return error 400 with an error message."""
+        """Test POST /api/add_cost with missing 'sum': should return error 400 with an error message."""
         data = {
             "userid": 123123,
             "description": "testing missing sum",
             "category": "sport"
         }
-        res = requests.post(f"{BASE_URL}/api/addCost", json=data)
+        res = requests.post(f"{BASE_URL}/api/add_cost", json=data)
         self.assertEqual(res.status_code, 400)
         self.assertIn("error", res.json())
 
@@ -50,7 +50,7 @@ class TestCostManagerAPI(unittest.TestCase):
 
     def test_user_found(self):
         """Test GET /api/usersLogic/:id for an existing user: should return user info and total."""
-        res = requests.get(f"{BASE_URL}/api/usersLogic/322642737")
+        res = requests.get(f"{BASE_URL}/api/users_logic/322642737")
         self.assertEqual(res.status_code, 200)
         self.assertIn("first_name", res.json())
         self.assertIn("last_name", res.json())
@@ -58,7 +58,7 @@ class TestCostManagerAPI(unittest.TestCase):
 
     def test_user_not_found(self):
         """Test GET /api/usersLogic/:id for non-existing user: should return 404 with error message."""
-        res = requests.get(f"{BASE_URL}/api/usersLogic/999999")
+        res = requests.get(f"{BASE_URL}/api/users_logic/999999")
         self.assertEqual(res.status_code, 404)
         self.assertIn("error", res.json())
 

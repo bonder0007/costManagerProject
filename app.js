@@ -5,9 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // Route handlers
-const usersRouter = require('./routes/usersLogic');
+const usersRouter = require('./routes/users_logic');
 const aboutRouter = require('./routes/about');
-const addRouter = require('./routes/addCost');
+const addRouter = require('./routes/./add_cost');
 const reportRouter = require('./routes/report')
 
 // App initialization
@@ -15,7 +15,7 @@ const app = express();
 
 // Load environment and connect to MongoDB
 require('dotenv').config();
-require('./utils/db_connection_costManager');
+require('./utils/db_connection_cost_manager');
 
 /**
  * Express application setup and route registration.
@@ -35,9 +35,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/api/usersLogic', usersRouter);
+app.use('/api/users_logic', usersRouter);
 app.use('/api/about', aboutRouter);
-app.use('/api/addCost', addRouter);
+app.use('/api/add_cost', addRouter);
 app.use('/api/report', reportRouter);
 
 // catch 404 and forward to error handler

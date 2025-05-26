@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getUserDetails } = require('../controllers/usersController');
+const { getUserDetails } = require('../controllers/users_controller');
 
 /**
  * GET /api/users/:id
@@ -8,7 +8,7 @@ const { getUserDetails } = require('../controllers/usersController');
  *
  * @name GET/api/users/:id
  * @function
- * @memberof module:routes/usersLogic
+ * @memberof module:routes/users_logic
  * @inner
  */
 router.get('/:id', getUserDetails);

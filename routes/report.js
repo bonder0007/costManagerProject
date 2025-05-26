@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getReport } = require('../controllers/reportController');
+const { getReport } = require('../controllers/report_controller');
 
 /**
  * GET /api/report

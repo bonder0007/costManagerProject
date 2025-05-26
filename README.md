@@ -13,7 +13,7 @@ RESTful Web Service for managing personal expenses, built with Node.js, Express,
 
 | Method | Endpoint                | Description                          |
 |--------|-------------------------|--------------------------------------|
-| POST   | `/api/addCost`          | Add a new cost item                  |
+| POST   | `/api/add_cost`          | Add a new cost item                  |
 | GET    | `/api/report`           | Get monthly cost report              |
 | GET    | `/api/usersLogic/:id`   | Get user details and total spending |
 | GET    | `/api/about`            | List team members                    |
