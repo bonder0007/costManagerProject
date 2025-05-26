@@ -11,12 +11,12 @@ RESTful Web Service for managing personal expenses, built with Node.js, Express,
 
 ## 📁 Endpoints
 
-| Method | Endpoint                | Description                          |
-|--------|-------------------------|--------------------------------------|
-| POST   | `/api/add`          | Add a new cost item                  |
-| GET    | `/api/report`           | Get monthly cost report              |
-| GET    | `/api/usersLogic/:id`   | Get user details and total spending |
-| GET    | `/api/about`            | List team members                    |
+| Method | Endpoint           | Description                          |
+|--------|--------------------|--------------------------------------|
+| POST   | `/api/add`         | Add a new cost item                  |
+| GET    | `/api/report`      | Get monthly cost report              |
+| GET    | `/api/users/:id`   | Get user details and total spending |
+| GET    | `/api/about`       | List team members                    |
 
 ## 🛠 Technologies
 
@@ -31,7 +31,8 @@ RESTful Web Service for managing personal expenses, built with Node.js, Express,
 - Onn Bondarman
 - Nadav Nini
 
-## 🌐 Deployment (TBD)
+## 🌐 Deployment (Railway)
+https://costmanagerproject-production.up.railway.app/api/about
 
 ## Live Deployment
 
