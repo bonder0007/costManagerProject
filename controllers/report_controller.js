@@ -1,4 +1,4 @@
-const Cost = require('../models/cost');
+const Cost = require('../models/cost_model');
 
 /**
  * GET /api/report

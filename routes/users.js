@@ -8,7 +8,7 @@ const { getUserDetails } = require('../controllers/users_controller');
  *
  * @name GET/api/users/:id
  * @function
- * @memberof module:routes/users_logic
+ * @memberof module:routes/users
  * @inner
  */
 router.get('/:id', getUserDetails);

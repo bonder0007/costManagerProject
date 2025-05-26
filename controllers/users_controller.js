@@ -1,5 +1,5 @@
-const User = require('../models/users');
-const Cost = require('../models/cost');
+const User = require('../models/users_model');
+const Cost = require('../models/cost_model');
 
 /**
  * GET /api/users/:id

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addCost: add_cost } = require('../controllers/costs_controller');
+const { addCost: add } = require('../controllers/costs_controller');
 
 /**
  * POST /api/add
@@ -8,9 +8,9 @@ const { addCost: add_cost } = require('../controllers/costs_controller');
  *
  * @name POST/api/add
  * @function
- * @memberof module:routes/add_cost
+ * @memberof module:routes/add
  * @inner
  */
-router.post('/', add_cost);
+router.post('/', add);
 
 module.exports = router;
