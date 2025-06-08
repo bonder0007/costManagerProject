@@ -1,5 +1,5 @@
-const User = require('../models/users_model');
-const Cost = require('../models/cost_model');
+const userReq = require('../models/users_model');
+const costReq = require('../models/cost_model');
 
 /**
  * GET /api/users/:id
@@ -13,13 +13,13 @@ const Cost = require('../models/cost_model');
 const getUserDetails = async (req, res) => {
     try {
         const userId = parseInt(req.params.id);
-        const user = await User.findOne({ id: userId });
+        const user = await userReq.findOne({ id: userId });
 
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        const costs = await Cost.find({ userid: userId });
+        const costs = await costReq.find({ userid: userId });
         const total = costs.reduce((sum, cost) => sum + cost.sum, 0);
 
         res.json({

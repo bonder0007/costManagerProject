@@ -1,4 +1,4 @@
-const Cost = require('../models/cost_model');
+const costReq = require('../models/cost_model');
 
 /**
  * POST /api/add
@@ -23,7 +23,7 @@ const addCost = async (req, res) => {
             return res.status(400).send({ error: 'Invalid cost body' });
         }
 
-        const cost = new Cost({
+        const cost = new costReq({
             userid,
             description,
             category,

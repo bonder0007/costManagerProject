@@ -1,4 +1,4 @@
-const User = require('../models/users_model');
+const userReq = require('../models/users_model');
 
 /**
  * GET /api/about
@@ -11,7 +11,7 @@ const User = require('../models/users_model');
 
 const getAbout = async (req, res) => {
     try {
-        const team = await User.find({}, { _id: 0, first_name: 1, last_name: 1 });
+        const team = await userReq.find({}, { _id: 0, first_name: 1, last_name: 1 });
         res.json(team);
     } catch (err) {
         res.status(500).json({ error: err.message });

@@ -1,4 +1,4 @@
-const Cost = require('../models/cost_model');
+const costReq = require('../models/cost_model');
 
 /**
  * GET /api/report
@@ -20,7 +20,7 @@ const getReport = async (req, res) => {
         const start = new Date(year, month - 1, 1);
         const end = new Date(year, month, 1);
 
-        const costs = await Cost.find({
+        const costs = await costReq.find({
             userid: parseInt(id),
             date: { $gte: start, $lt: end }
         });
